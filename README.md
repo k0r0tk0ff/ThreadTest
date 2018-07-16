@@ -8,6 +8,10 @@
   Низкоуровневые блокировки  
   Неблокирующие алгоритмы  
   
+  Atomic Variables in Java  
+  AtomicInteger, AtomicLong, AtomicBoolean, AtomicReference  
+  main methods - get(), set(), lazySet(), compareAndSet(), weakCompareAndSet()  
+    
   Потокобезопасные коллекции - Concurrent Collections  
     CopyOnWriteArrayList<E>  
     CopyOnWriteArraySet<E>  - аналог "Set"  
@@ -15,8 +19,17 @@
     ConcurrentHashMap<K, V> - аналог HashMap, хранит hash ключа и связанный с ним сегмент. Volotile.
     ConcurrentNavigableMap<K,V> - отсортированный Map, испо. Iterator  
     ConcurrentSkipListMap<K, V> - аналог TreeMap
-    ConcurrentSkipListSet<E> - аналог Set
+    ConcurrentSkipListSet<E> - аналог Set  
     
+    
+  Обзор методов, поддерживаемых Thread -
+    void start();
+    void interrupt();
+    viod wait();
+    void notify();
+    void notifyAll();
+    
+  Deprecated methods - stop(), resume(), suspend()  
        
   
   Практическое задание (Глава3) -  
