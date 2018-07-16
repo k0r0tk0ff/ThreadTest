@@ -41,10 +41,20 @@
   
 
 ####   Thread Pools  
-     ExecutorService 
-     ThreadPoolExecutor  
-     ScheduledPoolExecutor  
-     ForkJoinPool
+     
+     ThreadPoolExecutor 
+     -- (реализация ExecutorService)  
+        Очередь, в которой задачи собираются, если запущено больше потоков, чем threadPoolSize.  
+        -- Оптимальный пул потоков = Runtime.getRuntime().availableProcessors() + 1  
+     MemoryAwareThreadPoolExecutor -  пул с ограничением по памяти,  
+     блокирует отправку задачи, когда в очереди слишком много задач  
+     
+     ScheduledPoolExecutor 
+     -- (реализация ScheduledExecutorService)   - выполнение кода асихронно и периодически  
+     или когда требуется выполнить код через некоторое время.  
+     
+     ForkJoinPool - реализация на примере Int.parralelStream().peek(x -> x)
+     
      
   ----------------------------------------------------------------------------------------------------  
   
@@ -52,7 +62,7 @@
   Написать  приложение, которое в своей логике будет использовать многопоточность.  
   При этом использовать  
   1) interrupt() для остановки  
-  2) 
+  2) Thread pool
   
   
   
