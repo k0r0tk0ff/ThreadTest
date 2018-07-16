@@ -1,0 +1,42 @@
+Многопоточное программирование в Java 8. Часть первая. Параллельное выполнение кода с помощью потоков
+https://tproger.ru/translations/java8-concurrency-tutorial-1/
+
+Как это работает в мире java. Пул потоков
+https://habr.com/post/326146/
+
+Какой Java поток нагружает мой процессор
+https://habr.com/post/153135/
+
+https://habr.com/company/otus/blog/342040/
+Каков должен быть размер у Thread Pool?
+
+https://habr.com/company/otus/blog/338770/
+Stream API & ForkJoinPool
+
+
+Класс Semaphore, примеры реализации кода в Java | Блог только про Java
+http://pro-java.ru/parallelizm-v-java/klass-semaphore-primery-realizacii-koda-v-java/
+
+Многопоточность в Java: ExecutorService / Хабр
+https://habr.com/post/116363/
+
+10 советов по использованию ExecutorService / Хабр
+https://habr.com/post/260953/
+
+InterruptedException and interrupting threads explained
+https://www.nurkiewicz.com/2014/05/interruptedexception-and-interrupting.html
+
+Multithreading in practice / Хабр
+https://habr.com/post/137065/
+
+Java. Остановись задача / Хабр
+https://habr.com/post/133413/
+
+Собеседование по Java — многопоточность (вопросы и ответы)
+http://javastudy.ru/interview/concurrent/
+
+Обзор java.util.concurrent.* / Блог компании Luxoft / Хабр
+https://habr.com/company/luxoft/blog/157273/
+
+Теория и практика Java: Пулы потоков и очередь действий
+https://www.ibm.com/developerworks/ru/library/j-jtp0730/index.html
