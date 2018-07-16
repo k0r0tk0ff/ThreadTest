@@ -1,5 +1,4 @@
-# ThreadTest
-    Multythreading 
+#    Multythreading 
 
 ## Глава4 - Многопоточность
     Синхронные и асинхронные операции  
