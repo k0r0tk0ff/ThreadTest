@@ -2,17 +2,16 @@
     Multythreading 
 
 ## Глава4 - Многопоточность
-
-  Синхронные и асинхронные операции  
-  Синхронизация ресурсов - блок кода "synchronized"  
-  Низкоуровневые блокировки  
-  Неблокирующие алгоритмы  
+    Синхронные и асинхронные операции  
+    Синхронизация ресурсов - блок кода "synchronized"  
+    Низкоуровневые блокировки  
+    Неблокирующие алгоритмы  
   
-  Atomic Variables in Java  
-  AtomicInteger, AtomicLong, AtomicBoolean, AtomicReference  
-  main methods - get(), set(), lazySet(), compareAndSet(), weakCompareAndSet()  
+####  Atomic Variables in Java  
+    AtomicInteger, AtomicLong, AtomicBoolean, AtomicReference  
+    main methods - get(), set(), lazySet(), compareAndSet(), weakCompareAndSet()  
     
-  Потокобезопасные коллекции - Concurrent Collections  
+####  Потокобезопасные коллекции - Concurrent Collections  
     CopyOnWriteArrayList<E>  
     CopyOnWriteArraySet<E>  - аналог "Set"  
     ConcurrentMap<K, V>  
@@ -21,17 +20,41 @@
     ConcurrentSkipListMap<K, V> - аналог TreeMap
     ConcurrentSkipListSet<E> - аналог Set  
     
+    ConcurrentLinkedQueue    
+    ConcurrentLinkedDeque<E>  - данные можно добавлять и вытаскивать с обоих сторон
+    ArrayBlockingQueue<E>  
+    DelayQueue<E extends Delayed>  - позволяет вытаскивать элементы из очереди только по прошествии некоторой задержки  
+    LinkedBlockingQueue<E>  -  реализация очереди основанная на «two lock queue» - один лок на добавление, др. на вытаскивание элемента.  
+    PriorityBlockingQueue<E> - первым из очереди выходит самый наименьший элемент
+    SynchronousQueue<E> - один вошел, один вышел. Каждая операция вставки блокирует Producer до техпор, пока Consumer не вставит элемент.  
+    BlockingDeque<E> - двунаправленная очередь  
+    LinkedBlockingDeque<E> - двунаправленная блокирующая очередь на связанных нодах  
     
-  Обзор методов, поддерживаемых Thread -
+       
+####  Обзор методов, поддерживаемых Thread -
     void start();
     void interrupt();
     viod wait();
     void notify();
-    void notifyAll();
-    
-  Deprecated methods - stop(), resume(), suspend()  
-       
+    void notifyAll();      
+    Deprecated methods - stop(), resume(), suspend()  
   
-  Практическое задание (Глава3) -  
+
+####   Thread Pools  
+     ExecutorService 
+     ThreadPoolExecutor  
+     ScheduledPoolExecutor  
+     ForkJoinPool
+     
+  ----------------------------------------------------------------------------------------------------  
+  
+####  Практическое задание (Глава4) -    
   Написать  приложение, которое в своей логике будет использовать многопоточность.  
+  При этом использовать  
+  1) interrupt() для остановки  
+  2) 
+  
+  
+  
+  
   
