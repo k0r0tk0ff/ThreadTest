@@ -1,0 +1,54 @@
+----------------  ForkJoin -----------------------------------------------------
+
+public static void main(String[] args) {
+        Main main = new Main();
+        main.parallel();
+    }
+
+    void parallel() {
+        int result = IntStream.range(0,3)
+                .parallel()
+                .peek(
+                        x -> System.out.printf(
+                                "Thread [%s] peek: %d\n",
+                                Thread.currentThread().getName(), x))
+                .sum();
+        System.out.println("sum: " + result);
+    }
+    
+-----------------  Interrupt -----------------------------------------------------    
+public class Engine implements Runnable {
+    public Thread thread;
+    private int n;
+
+    public Engine(int n) {
+        this.thread = new Thread(this, "Engine");
+        this.n = n;
+    }
+
+    public void run() {
+        for (int i=1; i < 100; i++) {
+            System.out.println(i);
+            if(i==n) {
+                thread.interrupt();
+            }
+
+            if(thread.isInterrupted()) {
+                System.out.println("work block \"is interrupted\"");
+                try {
+                    throw new InterruptedException("interrupted!!!");
+                } catch (InterruptedException e) {
+                    System.out.println("interrupted!!!");
+                }
+                break;
+            }
+        }
+    }
+}
+
+public class Starter {
+    public static void main(String[] args) {
+        Engine engine = new Engine(5);
+        engine.thread.start();
+    }
+}
