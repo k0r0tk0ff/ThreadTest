@@ -52,13 +52,16 @@
      -- (реализация ScheduledExecutorService)   - выполнение кода асихронно и периодически  
      или когда требуется выполнить код через некоторое время.  
      
-     ForkJoinPool - реализация на примере Int.parralelStream().peek(x -> x)
+     ForkJoinPool - реализация под капотом на примере IntStream.parralel().peek(......)
+     описание ExecutorService executor = Executors.newWorkStealingPool();
+     parallelism size (default = count of processor cores)
      
      функциональный интерфейс Callable
      
      Возвращаемый тип Future - который предоставляет информацию о задвнии - 
-        isDone()
-        get()
+        isDone() - проверяем, завершено ли выполнение
+        get() - блокирует поток и ждет завершения задачи, а затем возвращает результат ее выполнения.
+                Для избежания зависания, можно передать timeout
         
         
      
