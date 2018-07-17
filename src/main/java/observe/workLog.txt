@@ -1,0 +1,10 @@
+new Q
+new Producer --> new Thread (Producer) --> q.put(i++) valueSet=true, notify(), Thread(Producer) wait    n=0
+new Consumer --> new Thread (Consumer) --> q.get(i++) valueSet=false, notify()                          n=0
+Thread(Producer) wake up,  q.put(i++), valueSet=true, notify(), Thread(Producer) wait                   n=1
+Thread(Consumer) wake up,  q.get(i++), valueSet=false, notify(), Thread(Consumer) wait                  n=1
+Thread(Producer) wake up,  q.put(i++), valueSet=true, notify(), Thread(Producer) wait                   n=2
+Thread(Consumer) wake up,  q.get(i++), valueSet=false, notify(), Thread(Consumer) wait                  n=2
+Thread(Producer) wake up,  q.put(i++), valueSet=true, notify(), Thread(Producer) wait                   n=3
+Thread(Consumer) wake up,  q.get(i++), valueSet=false, notify(), Thread(Consumer) wait                  n=3
+.......

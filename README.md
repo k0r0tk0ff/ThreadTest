@@ -32,7 +32,7 @@
        
 ####  Обзор методов, поддерживаемых Thread -
     void start();
-    void interrupt();
+    void show.interrupt();
     viod wait();
     void notify();
     void notifyAll();      
@@ -70,7 +70,7 @@
 ####  Практическое задание (Глава4) -    
   Написать  приложение, которое в своей логике будет использовать многопоточность.  
   При этом использовать  
-  1) interrupt() для остановки  
+  1) show.interrupt() для остановки  
   2) Thread pool
   
   
