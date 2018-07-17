@@ -13,7 +13,6 @@ https://habr.com/company/otus/blog/342040/
 https://habr.com/company/otus/blog/338770/
 Stream API & ForkJoinPool
 
-
 Класс Semaphore, примеры реализации кода в Java | Блог только про Java
 http://pro-java.ru/parallelizm-v-java/klass-semaphore-primery-realizacii-koda-v-java/
 
